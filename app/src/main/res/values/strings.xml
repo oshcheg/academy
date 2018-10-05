@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">card</string>
+    <string name="person_name">Shchegolskaya Oksana</string>
+    <string name="photo">Фотография</string>
+    <string name="job_position">Junior Android Developer</string>
+    <string name="no_name">No name</string>
+    <string name="telegram">Telegram</string>
+    <string name="habrahabr">Habrahabr</string>
+    <string name="instagram">Instagram</string>
+    <string name="message_hint">Enter a message…</string>
+    <string name="button_send_text">Send message</string>
+    <string name="email">EMAIL</string>
+    <string name="job_description">Oksana started to learn Java and Swift some month ago. Before she programmed in Flash(ActionScript).</string>
+    <string name="no_app_to_send_email">No app to send email</string>
+    <string name="no_app_to_open_link">No app to open link</string>
+    <string name="choose_app">Choose app</string>
+    <string name="default_email_subject">Hello, Android Academy MSK</string>
+    <string name="mailto">mailto</string>
+    <string name="copyright">"© 2018 Shchegolskaya Oksana"</string>
+</resources>
