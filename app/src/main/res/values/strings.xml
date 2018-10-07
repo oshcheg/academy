@@ -17,4 +17,11 @@
     <string name="default_email_subject">Hello, Android Academy MSK</string>
     <string name="mailto">mailto</string>
     <string name="copyright">"© 2018 Shchegolskaya Oksana"</string>
+
+    <string name="telegram_package">"org.telegram.messenger"</string>
+    <string name="habr_package">"ru.habrahabr"</string>
+    <string name="instagram_package">"com.instagram.android"</string>
+    <string name="telegram_link">"https://telegram.org"</string>
+    <string name="habr_link">"https://m.habr.com"</string>
+    <string name="instagram_link">"https://instagram.com"</string>
 </resources>
