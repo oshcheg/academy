@@ -33,16 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.send_btn:
-                sendEmail(etMessage.getText().toString());
+                sendEmail(getString(R.string.default_email_subject), etMessage.getText().toString());
                 break;
             case R.id.telegram:
-                Utils.openLink(this, R.string.telegram_package, R.string.telegram_link);
+                Utils.openLink(this, Constants.TELEGRAM_PACKAGE, Constants.TELEGRAM_LINK);
                 break;
             case R.id.instagram:
-                Utils.openLink(this, R.string.instagram_package, R.string.instagram_link);
+                Utils.openLink(this, Constants.INSTAGRAM_PACKAGE, Constants.INSTAGRAM_LINK);
                 break;
             case R.id.habr:
-                Utils.openLink(this, R.string.habr_package, R.string.habr_link);
+                Utils.openLink(this, Constants.HABR_PACKAGE, Constants.HABR_LINK);
                 break;
         }
     }
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         containerLayout.addView(tvCopyright);
     }
 
-    private void sendEmail(String message) {
-        MessageActivity.show(this, etMessage.getText().toString());
+    private void sendEmail(String subject, String message) {
+        MessageActivity.show(this, subject, message);
     }
 
 }
