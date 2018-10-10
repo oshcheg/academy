@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">card</string>
     <string name="person_name">Shchegolskaya Oksana</string>
-    <string name="photo">Фотография</string>
+    <string name="photo">Photo</string>
     <string name="job_position">Junior Android Developer</string>
     <string name="no_name">No name</string>
     <string name="telegram">Telegram</string>
@@ -15,6 +15,5 @@
     <string name="no_app_to_open_link">No app to open link</string>
     <string name="choose_app">Choose app</string>
     <string name="default_email_subject">Hello, Android Academy MSK</string>
-    <string name="mailto">mailto</string>
     <string name="copyright">"© 2018 Shchegolskaya Oksana"</string>
 </resources>
