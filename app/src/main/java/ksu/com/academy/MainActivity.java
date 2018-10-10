@@ -36,13 +36,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 sendEmail(getString(R.string.default_email_subject), etMessage.getText().toString());
                 break;
             case R.id.telegram:
-                Utils.openLink(this, Constants.TELEGRAM_PACKAGE, Constants.TELEGRAM_LINK);
+                Utils.openLink(this,
+                        Constants.TELEGRAM_PACKAGE + UserData.TELEGRAM_NIK,
+                        Constants.TELEGRAM_LINK + UserData.TELEGRAM_NIK);
                 break;
             case R.id.instagram:
-                Utils.openLink(this, Constants.INSTAGRAM_PACKAGE, Constants.INSTAGRAM_LINK);
+                Utils.openLink(this,
+                        Constants.INSTAGRAM_PACKAGE + UserData.INSTAGRAM_NIK,
+                        Constants.INSTAGRAM_LINK + UserData.INSTAGRAM_NIK);
                 break;
             case R.id.habr:
-                Utils.openLink(this, Constants.HABR_PACKAGE, Constants.HABR_LINK);
+                Utils.openLink(this,
+                        Constants.HABR_PACKAGE + UserData.HABR_NIK,
+                        Constants.HABR_LINK + UserData.HABR_NIK);
                 break;
         }
     }
@@ -82,5 +88,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void sendEmail(String subject, String message) {
         MessageActivity.show(this, subject, message);
     }
-
 }

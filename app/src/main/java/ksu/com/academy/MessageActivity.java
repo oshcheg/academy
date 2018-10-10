@@ -43,5 +43,4 @@ public class MessageActivity extends AppCompatActivity implements View.OnClickLi
             Utils.sendEmail(this, subject, message);
         }
     }
-
 }
