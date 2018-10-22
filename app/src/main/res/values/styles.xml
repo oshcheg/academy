@@ -1,34 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorPrimaryDark">@color/color_primary_dark</item>
-        <item name="colorAccent">@color/color_accent</item>
+    <style name="TextAppearance.Preview.Category" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="BorderlessButton" parent="Widget.AppCompat.Button.Borderless">
-        <item name="android:textColor">@color/color_accent</item>
+    <style name="TextAppearance.Preview.Title" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="LogoWithText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:drawablePadding">@dimen/spacing_after_icon</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:textSize">@dimen/text_size_default</item>
+    <style name="TextAppearance.Preview.Text" parent="@style/TextAppearance.AppCompat.Body1" />
+
+    <style name="TextAppearance.Preview.Date" parent="@style/TextAppearance.AppCompat.Caption" />
+
+    <style name="TextAppearance.Details.Title" parent="@style/TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Divider">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">2dp</item>
-        <item name="android:background">@color/color_accent</item>
+    <style name="TextAppearance.Details.Text" parent="@style/TextAppearance.AppCompat.Subhead">
+        <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Logo">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/spacing_around_icon</item>
+    <style name="TextAppearance.Details.Date" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/light_gray</item>
     </style>
 
 </resources>
