@@ -58,19 +58,19 @@ public class Utils {
         }
     }
 
-    public static void openLink(Context context, String packageName, String link, String userNik) {
+    public static void openLink(Context context, String packageName, String link) {
         if (isPackageInstalled(context, packageName)) {
-            openApp(context, packageName, link, userNik);
+            openApp(context, packageName, link);
         } else {
-            openBrowser(context, link, userNik);
+            openBrowser(context, link);
         }
     }
 
-    private static void openApp(Context context, String packageName, String link, String userNik) {
+    private static void openApp(Context context, String packageName, String link) {
         Intent intent = context.getPackageManager().getLaunchIntentForPackage(packageName);
         if (intent != null) {
             intent.setAction(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse(link + userNik));
+            intent.setData(Uri.parse(link));
         }
         List activities = context.getPackageManager().queryIntentActivities(intent,
                 PackageManager.MATCH_DEFAULT_ONLY);
@@ -79,8 +79,8 @@ public class Utils {
         }
     }
 
-    private static void openBrowser(Context context, String link, String userNik) {
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link + userNik));
+    private static void openBrowser(Context context, String link) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_app)));
         } else {

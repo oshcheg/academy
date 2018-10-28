@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size_news_item_height"
-    card_view:cardElevation="@dimen/size_news_item_elevation"
+    android:layout_height="wrap_content"
     tools:showIn="@layout/activity_news_list">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,13 +12,13 @@
 
         <TextView
             android:id="@+id/category_tv"
-            style="@style/TextAppearance.Preview.Category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_default"
             android:layout_marginTop="@dimen/spacing_default"
             android:layout_marginEnd="@dimen/spacing_default"
             android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Preview.Category"
             app:layout_constraintEnd_toStartOf="@+id/image_iv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +26,6 @@
 
         <TextView
             android:id="@+id/title_tv"
-            style="@style/TextAppearance.Preview.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_default"
@@ -36,6 +33,7 @@
             android:layout_marginEnd="@dimen/spacing_default"
             android:ellipsize="end"
             android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.Preview.Title"
             app:layout_constraintEnd_toStartOf="@+id/image_iv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/category_tv"
@@ -43,7 +41,6 @@
 
         <TextView
             android:id="@+id/text_tv"
-            style="@style/TextAppearance.Preview.Text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_default"
@@ -51,6 +48,7 @@
             android:layout_marginEnd="@dimen/spacing_default"
             android:ellipsize="end"
             android:maxLines="3"
+            android:textAppearance="@style/TextAppearance.Preview.Text"
             app:layout_constraintEnd_toStartOf="@+id/image_iv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_tv"
@@ -58,7 +56,6 @@
 
         <TextView
             android:id="@+id/published_date_tv"
-            style="@style/TextAppearance.Preview.Date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_default"
@@ -66,6 +63,7 @@
             android:layout_marginEnd="@dimen/spacing_default"
             android:layout_marginBottom="@dimen/spacing_default"
             android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.Preview.Date"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_iv"
             app:layout_constraintStart_toStartOf="parent"

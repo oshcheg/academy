@@ -12,8 +12,6 @@
 
     <dimen name="size_news_item_image">100dp</dimen>
     <dimen name="size_news_item_min_width">250dp</dimen>
-    <dimen name="size_news_item_height">200dp</dimen>
-    <dimen name="size_news_item_elevation">3dp</dimen>
     <dimen name="spacing_around_news_item">2dp</dimen>
 
 </resources>

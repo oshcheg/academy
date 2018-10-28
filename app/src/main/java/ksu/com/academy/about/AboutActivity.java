@@ -46,7 +46,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.telegram_iv:
                 Utils.openLink(this,
-                        Constants.TELEGRAM_PACKAGE, Constants.TELEGRAM_LINK, Constants.TELEGRAM_NIK);
+                        Constants.TELEGRAM_PACKAGE, Constants.TELEGRAM_LINK);
                 break;
         }
     }

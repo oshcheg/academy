@@ -41,8 +41,7 @@ public class NewsDetailsActivity extends AppCompatActivity {
         TextView tvText = findViewById(R.id.text_tv);
         TextView tvPublishedDate = findViewById(R.id.published_date_tv);
 
-        RequestManager imageLoader = Glide.with(this);
-        imageLoader.load(newsItem.getImageUrl()).into(ivImage);
+        Glide.with(this).load(newsItem.getImageUrl()).into(ivImage);
         tvTitle.setText(newsItem.getTitle());
         tvText.setText(newsItem.getFullText());
         tvPublishedDate.setText(Utils.formatDateTime(this, newsItem.getPublishDate()));

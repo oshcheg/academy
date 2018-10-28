@@ -2,7 +2,6 @@ package ksu.com.academy.news;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +20,9 @@ public class NewsListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_news_list);
 
         RecyclerView list = findViewById(R.id.list);
-        list.setAdapter(new NewsListAdapter(this, NewsData.generateNews(), clickListener));
+        list.setAdapter(new NewsListAdapter(this, NewsData.generateNews(), newsItem -> {
+            NewsDetailsActivity.show(this, newsItem);
+        }));
         list.setLayoutManager(new GridLayoutManager(this, getColumnCount()));
 
         RecyclerView.ItemDecoration dividerItemDecoration =
@@ -31,8 +32,7 @@ public class NewsListActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_new_list, menu);
+        getMenuInflater().inflate(R.menu.menu_new_list, menu);
         return true;
     }
 
@@ -46,10 +46,6 @@ public class NewsListActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    private final NewsListAdapter.OnItemClickListener clickListener = newsItem -> {
-        NewsDetailsActivity.show(this, newsItem);
-    };
 
     private int getColumnCount() {
         int minSizeInPixels = getResources().getDimensionPixelSize(R.dimen.size_news_item_min_width);
