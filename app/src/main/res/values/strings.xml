@@ -1,12 +1,11 @@
 <resources>
-    <string name="app_name">card</string>
+
+    <string name="app_name">Android Academy</string>
     <string name="person_name">Shchegolskaya Oksana</string>
-    <string name="photo">Photo</string>
+    <string name="description_photo">Photo</string>
     <string name="job_position">Junior Android Developer</string>
     <string name="no_name">No name</string>
-    <string name="telegram">Telegram</string>
-    <string name="habrahabr">Habrahabr</string>
-    <string name="instagram">Instagram</string>
+    <string name="description_telegram">Telegram</string>
     <string name="message_hint">Enter a message…</string>
     <string name="button_send_text">Send message</string>
     <string name="email">EMAIL</string>
@@ -16,4 +15,7 @@
     <string name="choose_app">Choose app</string>
     <string name="default_email_subject">Hello, Android Academy MSK</string>
     <string name="copyright">"© 2018 Shchegolskaya Oksana"</string>
+    <string name="about">About</string>
+    <string name="description_news_photo">News photo</string>
+
 </resources>

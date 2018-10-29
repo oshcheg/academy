@@ -1,7 +1,8 @@
-package ksu.com.academy;
+package ksu.com.academy.about;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -12,18 +13,26 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import androidx.appcompat.app.AppCompatActivity;
+import ksu.com.academy.Constants;
+import ksu.com.academy.R;
+import ksu.com.academy.Utils;
+
+public class AboutActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText etMessage;
     private Button btnSend;
     private ImageView ivTelegram;
-    private ImageView ivInstagram;
-    private ImageView ivHabr;
+
+    public static void show(Activity activity) {
+        Intent intent = new Intent(activity, AboutActivity.class);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about);
 
         prepare();
         setListeners();
@@ -35,20 +44,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.send_btn:
                 sendEmail(getString(R.string.default_email_subject), etMessage.getText().toString());
                 break;
-            case R.id.telegram:
+            case R.id.telegram_iv:
                 Utils.openLink(this,
-                        Constants.TELEGRAM_PACKAGE + UserData.TELEGRAM_NIK,
-                        Constants.TELEGRAM_LINK + UserData.TELEGRAM_NIK);
-                break;
-            case R.id.instagram:
-                Utils.openLink(this,
-                        Constants.INSTAGRAM_PACKAGE + UserData.INSTAGRAM_NIK,
-                        Constants.INSTAGRAM_LINK + UserData.INSTAGRAM_NIK);
-                break;
-            case R.id.habr:
-                Utils.openLink(this,
-                        Constants.HABR_PACKAGE + UserData.HABR_NIK,
-                        Constants.HABR_LINK + UserData.HABR_NIK);
+                        Constants.TELEGRAM_PACKAGE, Constants.TELEGRAM_LINK);
                 break;
         }
     }
@@ -56,9 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void prepare() {
         etMessage = findViewById(R.id.message_et);
         btnSend = findViewById(R.id.send_btn);
-        ivTelegram = findViewById(R.id.telegram);
-        ivInstagram = findViewById(R.id.instagram);
-        ivHabr = findViewById(R.id.habr);
+        ivTelegram = findViewById(R.id.telegram_iv);
 
         addCopyrightText();
     }
@@ -66,8 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setListeners() {
         btnSend.setOnClickListener(this);
         ivTelegram.setOnClickListener(this);
-        ivInstagram.setOnClickListener(this);
-        ivHabr.setOnClickListener(this);
     }
 
     private void addCopyrightText() {
@@ -78,6 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        final int spacingDefault = getResources().getDimensionPixelSize(R.dimen.spacing_default);
+        params.topMargin = spacingDefault;
+        params.bottomMargin = spacingDefault;
         params.gravity = Gravity.CENTER_HORIZONTAL;
         tvCopyright.setLayoutParams(params);
 
